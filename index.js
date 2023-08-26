@@ -1,4 +1,5 @@
-const tutorials = [
+function titleCased() {
+  const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
   'implementing Blockchain Web API',
@@ -9,8 +10,22 @@ const tutorials = [
   'what is the difference between == and ===?',
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
-];
+  ];
 
-const titleCased = () => {
-  return tutorials
+  // Function to capitalize the first letter of each word in a string
+  function capitalize(str) {
+    return str.split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  }
+
+  // Map over the tutorials array and apply the capitalize function to each tutorial
+  return tutorials.map((tutorial) => capitalize(tutorial));
 }
+
+
+console.log(titleCased());
+
+
+
+
+
+
